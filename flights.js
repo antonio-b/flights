@@ -1,25 +1,23 @@
-// fetch(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/DAL-sky/PHX-sky/anytime/anytime`, {
-// 	"method": "GET",
-// 	"headers": {
-// 		"x-rapidapi-key": "ef0e508b02mshb7290647be2287ep1cc798jsnd7558781a3a5",
-// 		"x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
-// 	}
-// })
-//       .then(function(response) {
-//           return response.json();
-//       })
-//       .then(function(data) {
-//         // console.log(data);
-// 				for(let i = 0; i <data.Quotes.length; i++){
-// 					console.log(data.Quotes[i]);
-// 				}
-//         // data.Quotes.forEach(quote=>{
-//         //   console.log(data.Quotes);
-// 				//
-//         // })
-//       })
-
-
+fetch(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices/browseroutes/v1.0/US/USD/en-US/DAL-sky/PHX-sky/anytime/anytime`, {
+	"method": "GET",
+	"headers": {
+		"x-rapidapi-key": "ef0e508b02mshb7290647be2287ep1cc798jsnd7558781a3a5",
+		"x-rapidapi-host": "skyscanner-skyscanner-flight-search-v1.p.rapidapi.com"
+	}
+})
+      .then(function(response) {
+          return response.json();
+      })
+      .then(function(data) {
+        // console.log(data);
+				for(let i = 0; i < data.Quotes.length; i++){
+					// console.log(data.Quotes[i]);
+				}
+        // data.Quotes.forEach(quote=>{
+        //   console.log(data.Quotes);
+				//
+        // })
+      })
 
 			let months = ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'];
 
@@ -41,7 +39,7 @@
 			_('prev').addEventListener('click', () => trackMonth('prev'));
 			_('next').addEventListener('click', () => trackMonth('next'));
 
-			_('dep-to').addEventListener('focus', () => whichCityBox('to'));
+			// _('dep-to').addEventListener('focus', () => whichCityBox('to'));
 			_('one-way').addEventListener('click', () => toggleReturnBox('one-way'));
 			_('return').addEventListener('click', () => toggleReturnBox('return'));
 			_('leave-date').addEventListener('focus', showCalender);
@@ -190,3 +188,5 @@
 
 			calender(month, year);
 			positionCalender('leave-date');
+			AirportInput("dep-from");
+			AirportInput("dep-to");
