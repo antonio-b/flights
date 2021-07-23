@@ -82,6 +82,16 @@ fetch(`https://skyscanner-skyscanner-flight-search-v1.p.rapidapi.com/apiservices
 			  }
 			}
 
+			function toggleReturnBox(btn) {
+  let box1 = _('return-box');
+  // console.log(this.checked);
+  if (btn == 'return') {
+    box1.style.opacity = 1;
+  }
+  if (btn == 'one-way') {
+    box1.style.opacity = 0;
+  }
+}
 			function showCalender() {
 			  cal.style.opacity = 1;
 			  cal.style.pointerEvents = 'auto';
