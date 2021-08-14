@@ -38,7 +38,7 @@
 						alert("Please select another route and time ");
 						document.location='https://www.antonio-b.tech/flights';
 					}
-					 console.log(data.Carriers);
+					 console.log(data);
 					 searchForm.style.opacity = 0;
 					 searchForm.style.height = 0;
 					 searchForm.style.transition = ".5s";

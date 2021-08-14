@@ -110,7 +110,7 @@ body {
 
 #flight-info {
   display: flex;
-  border-bottom: 1px dotted silver;
+  
 }
 
 #flight-search .info-box {
@@ -262,11 +262,12 @@ h1{
    font-weight:bold;
    height:40px;
 }
-#departing-time,#departing-airport,#airline{
+#departing-time,#departing-airport{
     margin-left:10px;
 }
 #airline{
     font-weight:bold;
+    margin-left:5px;
 }
 #arriving-time{
     position:absolute;
@@ -285,7 +286,10 @@ h1{
 }
 #stops{
     position:absolute;
-    left:47%;
+    left:64%;
+}
+#outbound-flight-results{
+  font-size: 13px;
 }
 @media only screen and (max-width: 1300px){
     
