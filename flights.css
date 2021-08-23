@@ -7,11 +7,12 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: center;;
+  align-items: center;
+  background-color: #172833;
 }
 
 #search-form {
-  border: 1px solid ;
+  /* border: 1px solid ; */
   width: 700px;
   position: relative;
 
@@ -108,7 +109,7 @@ body {
   border-bottom: 1px dotted silver;
 }
 
-#flight-info {
+#departingflight-info,#arrivingflight-info {
   display: flex;
   
 }
@@ -118,7 +119,7 @@ body {
   justify-content: center;
 }
 #flight-search input[type=submit] {
-  background: #00b4eb;
+  background: #45a29e;
   color: white;
   padding: 0;
   height: 50px;
@@ -256,20 +257,27 @@ h1{
    border-radius:5px;
 }
 
-#flight-info,#flight-itinerary{
+#departingflight-info,#departingflight-itinerary,#arrivingflight-info,#arrivingflight-itinerary{
    display:flex;
    justify-content:space-between; 
    font-weight:bold;
    height:40px;
 }
-#departing-time,#departing-airport{
+#departingflight-itinerary{
+    border-bottom:1px solid;
+}
+#departing-time,#departing-airport,#departing-time-return,#departing-airport-return{
     margin-left:10px;
 }
 #airline{
     font-weight:bold;
-    margin-left:5px;
+    margin-left:10px;
 }
-#arriving-time{
+#airline-return{
+    font-weight:bold;
+    
+}
+#arriving-time,#arriving-time-return{
     position:absolute;
     left:9%;
 }
@@ -277,19 +285,30 @@ h1{
     position:absolute;
     left:5%;
 }
-#arriving-airport{
+#arriving-airport,#arriving-airport-return{
     position:absolute;
     left:9%;
 }
 #price,#per-price{
     margin-right:10px;
+    font-weight:bold;
+    font-size:14px;
 }
 #stops{
     position:absolute;
     left:64%;
 }
+#stops-return{
+    margin-right:33%;
+}
 #outbound-flight-results{
   font-size: 13px;
+}
+#duration-time{
+    margin-right:25px;
+}
+#duration-time-return{
+    margin-right:75px;
 }
 @media only screen and (max-width: 1300px){
     
