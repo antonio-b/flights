@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <link rel="stylesheet" href="flights.css">
-    <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@2.0.2/dist/index.browser.min.js"></script>
+  <!-- <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@2.0.2/dist/index.browser.min.js"></script> -->
     <title>Flywithme.com</title>
   </head>
   <body>
@@ -15,7 +15,7 @@
       <section>
         <div class="flight" id="flightbox">
 
-          <form id="flight-form">
+          <form action="#" class = "search-flight" target="" id="flight-form">
           <!-- TRIP TYPE -->
                 <div id="flight-type">
                     <div class="info-box">
@@ -32,12 +32,12 @@
                 <div id="flight-depart">
                     <div class="info-box">
                       <label for="">Departing FROM</label>
-                      <input type="text" id="dep-from" />
+                      <input type="text" id="dep-from" required/>
                       <div id="depart-res"></div>
                     </div>
                     <div class="info-box" id="arrive-box">
                       <label for="">ARRIVING AT</label>
-                      <input type="text" id="dep-to" />
+                      <input type="text" id="dep-to" required/>
                       <div id="arrive-res"></div>
                     </div>
                 </div>
@@ -46,11 +46,11 @@
                 <div id="flight-dates">
                     <div class="info-box">
                       <label for="">Departure Date</label>
-                      <input type="text" id="leave-date" readonly />
+                      <input type="text" id="leave-date" required />
                     </div>
                     <div class="info-box" id="return-box">
-                      <label for="">Arrival Date</label>
-                      <input type="text" id="return-date" readonly />
+                      <label for="">Return Date</label>
+                      <input type="text" id="return-date" required />
                     </div>
                 </div>
 
@@ -75,12 +75,12 @@
                     </select>
                   </div>
 
-              </div>
+                </div>
 
                 <!-- SEARCH BUTTON -->
               <div id="flight-search">
                 <div class="info-box">
-                  <input type="submit" id="search-flight" value="SEARCH FLIGHTS"/>
+                  <input type="submit" id="searching"  value="SEARCH FLIGHTS"/>
                 </div>
               </div>
 
@@ -99,12 +99,30 @@
         </div>
 
   </div>
-
-
-
-
-    <script src="flights.js"></script>
-    <!-- <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@2.0.2/dist/index.browser.min.js"></script> -->
-
+  
+     <div class = "container">   
+        <div id="header">
+            <h1>FLY WITH ME</h1>
+        </div>
+    
+        <div id = "flight_header">
+            <p id = "depart-header"></p>
+            <p id="to">To</p>
+            <p id = "return-header"></p>
+            <p id = "departdate-header"></p>
+            <p id = "returndate-header"></p>
+            <button id ="modify-button">Modify</button>
+        </div> <!--div flight-header -->
+        <div id = "outbound-flight-results">
+            <div id="departingflight-info"></div>
+            <div id="departingflight-itinerary"></div>
+            <div id="arrivingflight-info"></div>
+            <div id="arrivingflight-itinerary"></div>
+        </div>
+        
+     </div>  <!--div container -->
+     <script src="https://cdn.jsdelivr.net/npm/airport-autocomplete-js@2.0.2/dist/index.browser.min.js"></script>
+     <script type="text/javascript" src="flights.js"></script>
+  
   </body>
 </html>
